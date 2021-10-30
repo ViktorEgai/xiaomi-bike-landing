@@ -1,0 +1,109 @@
+.about-battery {
+  padding-top: 112px;
+  padding-bottom: 120px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -254px;
+    z-index: -1;
+    width: 860px;
+    height: 864px;
+    background: linear-gradient(120.02deg, #FC501F 12.77%, rgba(252, 80, 31, 0) 59.51%);
+    opacity: 0.5;
+    filter: blur(280px);
+    transform: rotate(90deg);
+    border-radius: 50%;
+  }
+  &__line {
+    position: absolute; 
+    bottom: -29%;
+    left: 12.7%;
+    width: 75%;
+    height: 90%;
+    z-index: -1;
+  }
+  &__title {
+    @include font(45px, 500, 108%);
+    max-width: 75%;
+    margin-bottom: 60px;
+  }
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 40px;
+    margin-bottom: 30px;
+    &-item {
+      max-width: 360px;
+      opacity: 0.4;
+      &--active {
+        opacity: 1;
+        & .about-battery__descr-title::after {
+          background-color: $orange;
+        }
+      }
+      &:last-child {
+        & .about-battery__descr-title::after {
+          width: 100%;
+        }
+      }
+    }
+    &-title {
+      @include font(20px, 600, 120%);
+      margin-bottom: 30px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 111%;
+        height: 3px;
+        bottom: -15px;
+        left: 0;
+        background-color: #fff;
+      }
+      
+    }
+    &-text {
+      @include font(14px, 400, 150%);
+      letter-spacing: -0.01em;
+    }
+  }
+  &__photos {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &:before { 
+      content: '';
+      position: absolute;
+      top: -29%;
+      right: -9%;
+      z-index: -2;
+      width: 579px;
+      height: 582px;
+      background: linear-gradient(121.95deg, #FC1F1F 13.18%, rgba(252, 203, 31, 0.31) 72.93%);
+      opacity: 0.2;
+      filter: blur(280px);
+      transform: rotate(-90deg);
+      border-radius: 50%;
+    }
+    &-item {
+      background: linear-gradient(0deg, rgba(232, 181, 119, 0.3), rgba(232, 181, 119, 0.3));
+      background-blend-mode: soft-light, normal;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      object-fit: cover;
+      border-radius: 15px;
+      &:first-child {
+        width: 760px;
+        max-height: 400px;
+        position: relative;
+        z-index: 2;
+      }
+      &:last-child {
+        width: 360px;
+        max-height: 300px;
+        z-index: -2;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.speed {
+  padding: 120px 0;
+  background-image: url('../img/2-people.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  &__wrapper {
+    position: relative;
+     &:before {
+       content: '';
+       position: absolute;
+        top: -75%;
+        right: -30%;
+        z-index: -3;
+       width: 447px;
+       height: 450px;
+       background: #FC1F1F;
+       opacity: 0.3;
+       filter: blur(280px);
+       transform: rotate(-90deg);
+     }
+  }
+  &__logo {
+    margin-bottom: 150px;
+    display: block;
+  }
+  &__title {
+    @include font(45px, 500, 110%);
+    margin-bottom: 30px;
+    max-width: 400px;
+  }
+  &__text {
+    @include font(14px, 400, 150%);
+    max-width: 315px;
+  }
+}

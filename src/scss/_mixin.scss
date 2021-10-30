@@ -1,0 +1,23 @@
+@mixin font($size, $weight: normal, $line-height:100%, $color:inherit) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin btn {
+  font-family:'Gilroy',  sans-serif;
+  padding: 15px 37px;
+  background-color: $light;
+  border: none;
+  border-radius: 65px;
+}
+
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url('../fonts/#{$file}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

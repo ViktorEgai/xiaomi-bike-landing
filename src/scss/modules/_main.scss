@@ -1,0 +1,44 @@
+.main {  
+  padding-bottom: 135px;
+  padding-top: 126px;
+  &__wrapper {
+    position: relative;   
+    
+  }
+  &__image {    
+    position: absolute;
+    width: 1426px;
+    height: 1271px;
+    top: -610px;
+    z-index: -1;
+    right: 0;
+    transform: translateX(42%)    
+  }
+  &__title {
+    @include font(80px, 600);
+    margin-bottom: 30px;
+  }
+  &__descr {
+    @include font(30px, 600, 120%, $orange);
+    margin-bottom: 60px;
+    max-width: 45%;
+  }
+};
+.toggle-btn {
+  border-radius: 108px;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: 3px solid $light;
+  cursor: pointer;
+  @include font(16px,700,150%);
+  &__item {
+    background-color: transparent;
+    display: inline-block;
+    padding: 15px 35px;
+    &--active {
+      @include btn;
+      color: $dark;
+    } 
+  }
+}
