@@ -4,17 +4,21 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
+html, body {
+   overflow-x: hidden;
+ position: relative;
+
+}
+body { 
   font-family:'Gilroy', sans-serif;
   margin: 0;  
   background-color:$dark;
   color: $light;
-  .btn {
-    @include font(16px, 700, 150%, #151515);
-    @include btn;
-  }
 }
+ .btn {
+   @include font(16px, 700, 150%, #151515);
+   @include btn;
+ }
 .container {
   max-width: 1194px;
   margin: auto;

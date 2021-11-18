@@ -1,7 +1,641 @@
 @media (max-width:1440px) {
-  .main{
-    &::before {
-      background-position: 448px 0;
+  .about-battery__line {
+    left: 15.7%;
+    width: 80%;
+  }
+
+  .design__line-bottom {
+    left: -38%;
+  }
+}
+
+@media (max-width:1200px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .main {
+    &__title {
+      font-size: 56px;
+    }
+
+    &__descr {
+      font-size: 24px;
+    }
+
+    &__image {
+      width: 1245px;
+      height: 1160px;
+    }
+  }
+
+  .about-battery {
+    padding: 90px 0;
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__line {
+      left: 6.7%;
+      bottom: -32%;
+      width: 96%;
+    }
+
+    &__descr-title {
+      font-size: 16px;
+    }
+
+    &__descr-text {
+      font-size: 13px;
+    }
+
+    &__descr-item {
+      max-width: 31%;
+    }
+
+    &__photos-item {
+      &:first-child {
+        width: 600px;
+      }
+
+      &:last-child {
+        width: 315px;
+        max-height: 250px;
+      }
+    }
+  }
+
+  .speed__title,
+  .design__title,
+  .safety__title,
+  .mobile-top__title,
+  .brand__title,
+  .review__title,
+  .qna__title,
+  .buy-card__title {
+    font-size: 38px;
+  }
+
+  .design__line-bottom {
+    left: -36%;
+  }
+
+  .toggle-btn__item--active,
+  .toggle-btn__item {
+    padding: 10px 30px;
+  }
+
+  .speed {
+    padding: 90px 0;
+    background-size: cover;
+  }
+
+  .design {
+    padding: 90px 0;
+
+    &__cards-item {
+      height: 460px;
+      padding: 50px;
+      max-width: 465px;
+    }
+  }
+
+  .safety {
+    &__info-item {
+      max-width: 250px;
+    }
+
+    &__info-title {
+      font-size: 18px;
+
+      &::after {
+        width: 119%;
+      }
+    }
+
+    &__info-text {
+      font-size: 13px;
+    }
+
+    &__photos-item {
+      &:first-child {
+        width: 620px;
+      }
+
+      &:last-child {
+        width: 290px;
+        max-height: 250px;
+      }
+    }
+  }
+  .mobile-app {
+    padding: 30px 0 60px;
+    &__photo {
+      width: 93%;
+    }
+  }
+  .qna__text {
+    max-width: 570px;
+  }  
+}
+@media (max-width:992px) {
+  .container {
+    max-width: 768px;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .header__logo {
+    margin-right: auto;
+  }
+  .main {
+    &__image {
+      right: -150px;
+    }
+    &__descr {
+      font-size: 24px;
+      max-width: 48%;
+    }
+  }
+  .about-battery {
+    padding: 60px 0;    
+    &__photos {
+      display: none;
+    }
+    &__descr {
+      flex-direction: column;
+    }
+    &__descr-item {
+      max-width: 100%;
+      opacity: 1;
+      &:last-child .about-battery__descr-title::after {
+        width: 150px;
+      }
+    }
+    &__descr-title {
+      font-size: 24px;
+      color: $orange;
+      &:after {
+        width: 150px;
+        background-color: $orange;
+      }
+    }
+    &__descr-text {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    &__descr-image {
+      display: block;
+    }
+    &__line {
+      left: 10.7%;
+      bottom: -31%;
+      width: 99%;
+      transform: rotate(349deg);
+    }
+  }
+  .about-battery__title,
+  .speed__title,
+  .design__title,
+  .safety__title,
+  .mobile-top__title,
+  .brand__title,
+  .review__title,
+  .qna__title,
+  .buy-card__title {
+    font-size: 34px;
+  }
+  .design {
+    &__wrapper::before {
+      width: 526px;
+      height: 529px;      
+      background: #FC501F;
+      opacity: 0.5;
+      filter: blur(280px);
+      transform: rotate(-90deg);
+    }
+    &__title {
+      color: #fff;
+      max-width: 70%;
+      margin-bottom: 30px;
+    }
+    &__line-top, &__line-bottom {
+      display: none;
+    }
+    &__cards {
+      flex-direction: column;
+      grid-gap: 30px;
+      &-item {
+        max-width: 100%;
+        height: 550px;
+      }
+      &-title {
+        font-size: 24px;
+      }
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+  .safety {
+    &__info {
+      flex-direction: column;
+      grid-gap: 40px;
+      margin-bottom: 0;
+      &-title {
+        font-size: 24px;
+        color: $orange;
+        &::after {
+          
+          background-color: $orange;
+          width: 150px;
+        }
+      }
+      &-image {
+        display: block;
+      }
+      &-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      &-item {
+        max-width: 100%;        
+        opacity: 1;
+        &:last-child .safety__info-title::after {
+          width: 150px;
+        }
+        &:not(:last-child) {
+          padding: 0;          
+        }
+      }
+    }
+    &__photos {
+      display: none;
+    }
+  }
+  .mobile-app {
+    &__descr {
+      padding-top: 50px;
+      margin-right: 10px;
+    }
+    &__photo {
+      width: 100%;
+    }
+    &__line {
+      top: -54%;
+      left: 6%;
+
+      width: 195%;
+      height: 132%;
+      transform: rotate(228deg);
+    }
+  }
+  .brand {
+    padding: 75px 0;
+    &-swiper {
+      max-height: 516px;
+    }
+  }
+  .review {
+    &-swiper {
+      margin-right: -11%;
+    }
+    &__line {
+      display: none;
+    }
+  }
+  .qna {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__subtitle {
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+    &__descr {
+      margin-bottom: 80px;
+    }
+  }
+  .buy-card {
+    &__wrapper {        
+      border-top-right-radius: 15px;   
+      &::before {
+        display: none;
+      }
+    }
+    &__line {
+      display: none;
+    }
+    &__list {
+      display: none;
+      &-title {
+        display: none;
+      }
+    }
+    &__toggle {
+      margin-bottom: 150px;
+    }
+    &__image {
+      top: -42%;
+      right: -270px;
+      max-height: 550px;
+    }
+  }
+  .footer {
+    padding: 40px 0;
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;      
+    }
+    &__list {
+      text-align: center;
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  .main {
+    padding: 60px 0;
+    &__title {
+      font-size: 38px;
+    }
+    &__descr {
+    font-size: 20px;
+    max-width: 70%;         
+    }
+    &__image {
+      right: -100px;
+      top: -310px;
+      width: 810px;
+      height: 710px;
+    }
+  }
+  .about-battery__title,
+  .brand__title,
+  .buy-card__title,
+  .design__title,
+  .mobile-top__title,
+  .qna__title,
+  .review__title,
+  .safety__title,
+  .speed__title {
+    font-size: 25px;
+  }
+  .about-battery {
+    &__title {
+      max-width: 100%;
+    }
+    &__descr-title {
+      font-size: 20px;
+      &::after {
+        width: 100px;
+      }
+    }
+    &__descr-text {
+      font-size: 14px;
+    }
+    &__line {
+      left: 0;
+      bottom: -30%;
+      width: 100%;
+      transform: rotate(0)
+    }
+  }
+  .speed {
+    padding: 40px 0;
+  }
+  .design {
+    padding: 50px 0;
+    &__title {
+      max-width: 100%;
+    }
+    &__cards-item {
+     height: 450px;
+    }
+    &__cards-text { 
+      font-size: 14px;
+    }
+  }
+  .safety {
+    &__title {
+      margin-bottom: 45px;
+    }
+    &__info-title {
+      font-size: 20px;
+      &::after {
+        width: 100px;
+      }
+    }
+    &__info-text {
+      font-size: 14px;
+    }
+  }
+  .mobile-app {
+    &__descr {
+      padding-top: 0;
+      margin-right: 5px;
+      max-width: 320px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__text {
+      font-size: 14px;
+      width: 90%;
+    }
+    &__buttons-link {
+      margin-right: 10px;
+    }
+    &__line {
+      top: -51%;
+      left: 20%;
+      width: 237%;
+      height: 141%;
+    }
+  }
+  .brand {
+    padding: 40px 0;
+    &__title {
+      margin-top: 100px;
+    }
+    &-swiper {
+      max-height: 395px;
+    }
+  }
+  .swiper-pagination-bullet {
+    margin: 20px 0 !important;
+  }
+  .review {
+    padding: 60px 0;
+    &-swiper {
+      margin-right: 11%;
+    }
+    &__btn {
+      padding: 10px 25px;
+    }
+    &-btns {
+      width: 100px;
+    }
+    &-btns__btn {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  .qna {
+    &__btn {
+      padding: 10px 25px;
+    }
+    &__descr {
+      margin-bottom: 60px;
+    }
+    &__question {
+      font-size: 18px;
+    }
+    &__answer {
+      font-size: 13px;
+    }
+  }
+  .buy-card {
+    &__wrapper{
+      padding: 45px;
+    }
+    &__toggle {
+      margin-bottom: 100px;
+    }
+    &__btn {
+      min-width: 120px;
+      padding: 10px 25px;      
+    }
+    &__image {
+      max-height: 460px;
+      top: -44%;
+      right: -235px;
+    }
+
+  }
+}
+@media (max-width:576px) {
+  
+ .main {   
+   &__wrapper {
+    padding-top: 340px;
+  }
+   &__image {
+     right: auto;
+     left: 0;
+     top: -360px;
+     transform: translate(0);
+   }
+   &__title {
+     font-size: 30px;
+     margin-bottom: 15px;
+   }
+   &__descr {
+     font-size: 16px;
+     max-width: 100%;
+     margin-bottom: 30px;
+   }
+ }
+ .about-battery {
+   padding-top: 0;
+ }
+ .mobile-app {
+   &__wrapper {
+     flex-direction: column;
+   }
+   &__descr {
+     max-width: 100%;
+     margin-right: 0;
+     margin-bottom: 30px;
+     &::before{
+       display: none;
+     }
+   }
+   &__text {
+     width: 100%;
+   }
+   &__buttons {
+     max-width: 290px;
+     margin: 0 auto;
+   }
+   &__right-side {
+    height: 360px;
+   }
+   &__photo {
+     width: 285px;
+     left: 50%;
+     transform: translateX(-50%);
+   }
+   &__line {
+    top: 0;
+    left: -19%;
+    width: 165%;
+    height: 141%;
+    z-index: -10;
+   }
+ }
+  .brand {
+    height: 525px;
+    background: linear-gradient(0deg, #151515 36%, rgba(0, 0, 0, 0.171306) 54%);
+    &__text {
+      color: $light;
+    }
+    &-swiper__slide-item {
+      height: 525px;
+    }
+    &__title {
+      margin-top: 185px;
+    }
+  }
+  .swiper-pagination-2 {
+    display: block;
+    text-align: center;
+  }
+  .swiper-pagination-bullet-active {
+    background: $light;
+  }
+  .swiper-pagination-bullet {
+    margin: 0 15px !important;
+  }
+  .review {
+    &-swiper {
+      margin: 0 0 30px;
+    }
+    &-btns {
+      display: none;
+    }
+    &__bottom {
+      justify-content: center;
+    }
+  }
+  .qna__btn {
+    display: block;
+    margin: 0 auto;
+  }
+  .buy-card {
+    &__wrapper {
+      flex-direction: column;
+      padding: 20px;
+    }
+    &__image {
+      top:-360px;
+      left: 0;
+      max-width: 250px;
+    }
+    &__toggle {
+      margin-bottom: 350px;
+    }
+    &__btn {
+      min-width: 100%;
     }
   }
 }

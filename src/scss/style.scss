@@ -1,3 +1,4 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
 @import './mixin';
 @import './variables';
 @import './fonts';
@@ -7,4 +8,11 @@
 @import './modules/about-battery';
 @import './modules/speed';
 @import './modules/design';
+@import './modules/safety';
+@import './modules/mobile-app';
+@import './modules/brand';
+@import './modules/review';
+@import './modules/qna';
+@import './modules/buy-card';
+@import './modules/footer';
 @import './media';

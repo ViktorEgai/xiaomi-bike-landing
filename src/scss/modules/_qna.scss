@@ -1,0 +1,58 @@
+.qna {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 579px;
+      height: 582px;
+      left: -10%;
+      top: -10%;
+      z-index: -100;
+      border-radius: 50%;
+      background: linear-gradient(121.95deg, #FC1F1F 13.18%, rgba(252, 203, 31, 0.31) 72.93%);
+      opacity: 0.3;
+      filter: blur(280px);
+      transform: rotate(-90deg);
+    }
+  } 
+  &__title {
+    @include font(45px, 500, 110%, $orange);
+    margin-bottom: 30px;    
+  }
+  &__subtitle {
+    @include font(14px, 400, 150%);
+    letter-spacing: -0.01em;
+    margin-bottom: 60px;
+    max-width: 360px;    
+  }
+  &__btn {
+    @include btn;
+    @include font(16px, 400, 150%, $dark);
+  }
+  &__text {
+    max-width: 660px;
+  }
+  &__question {
+    @include font(20px, 600, 120%);
+    position: relative;
+    margin-bottom: 33px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background-color: $orange;          
+    }
+  }
+  &__answer {
+    @include font(14px, 400, 150%);
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+  }
+}

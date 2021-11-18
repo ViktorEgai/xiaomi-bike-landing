@@ -42,5 +42,16 @@
     "require-dir": "^1.2.0",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorEgai/xiaomi-bike-landing.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ViktorEgai/xiaomi-bike-landing/issues"
+  },
+  "homepage": "https://github.com/ViktorEgai/xiaomi-bike-landing#readme"
 }

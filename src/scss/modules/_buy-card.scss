@@ -1,0 +1,77 @@
+.buy-card {
+  padding-top: 80px;
+  &__wrapper {
+    background-image: url('../img/bike-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 80px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: relative;
+    border-top-right-radius: 150px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -15;
+      border-radius: 15px;
+      background-image: url('../img/bike-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &__title {
+    @include font( 45px, 500, 110%);
+    margin-bottom: 15px;
+  }
+  &__price {
+    @include font(30px, 600, 110%, $orange);
+    margin-bottom: 30px;
+  }
+  &__toggle {
+    margin-bottom: 200px; 
+  }
+  &__btn {
+    @include font(16px, 400, 150%, #fff);
+    border-radius: 65px;
+    min-width: 126px;
+    padding: 15px 35px;
+    background-color: $orange;
+    border: none;
+  }
+  &__right-side {
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+        top: -156px;
+        right: -30px;
+  }
+  &__list-title {
+    @include font(20px, 600, 120%, #fff);
+    margin-bottom: 20px;
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    @include font(14px, 400, 150%);
+    letter-spacing: -0.01em;    
+    &-item {
+      margin-bottom: 10px;
+    }
+  }
+  &__line {
+    position: absolute;
+    top: -30%;
+    width: 134%;
+    height: 129%;
+    left: -17%;
+    z-index: -10;
+}
+}

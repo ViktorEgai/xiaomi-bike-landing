@@ -48,14 +48,18 @@
     margin-right: 80px;
   }
   &__nav {
-    margin-right: auto;
+    
+    display: flex;
+    align-content: inherit;
   }
 }
 .nav {
+  width: 100%;
   &-list {
     list-style-type: none;
     display: flex;
     padding: 0;
+    margin-right: auto;
     &__item {
       @include font(14px, 400, 150%);
       &:not(:last-child) {
@@ -63,4 +67,16 @@
       }
     }
   }
+}
+.menu-btn {  
+  width: 54px;
+  height: 54px;
+  background: url('../img/menu.svg');
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  border: none;
+  border-radius: 65px;
+  display: none;
 }
