@@ -25,6 +25,15 @@
       background-size: cover;
       background-position: center;
     }
+    &--light {
+      background-image: none;
+      background-color: $light;
+      &::before {
+      background-image: none;
+      background-color: $light;
+
+      }
+    }
   }
   &__title {
     @include font( 45px, 500, 110%);
@@ -54,8 +63,11 @@
         right: -30px;
   }
   &__list-title {
-    @include font(20px, 600, 120%, #fff);
+    @include font(20px, 600, 120%);
     margin-bottom: 20px;
+    &--hidden {
+      display: none;
+    }
   }
   &__list {
     list-style-type: none;

@@ -16,29 +16,33 @@
   }
   &__title {
     @include font(80px, 600);
+    color: $orange;
     margin-bottom: 30px;
   }
   &__descr {
-    @include font(30px, 600, 120%, $orange);
+    @include font(30px, 600, 120%);
     margin-bottom: 60px;
-    max-width: 45%;
+    max-width: 43%;
   }
-};
+}
 .toggle-btn {
   border-radius: 108px;
   display: block;
   padding: 0;
   background-color: transparent;
-  border: 3px solid $light;
+  border: 3px solid var(--text-color);
   cursor: pointer;
   @include font(16px,700,150%);
   &__item {
     background-color: transparent;
     display: inline-block;
     padding: 15px 35px;
+    transition: all .3s;
     &--active {
       @include btn;
-      color: $dark;
+      background-color: var(--text-color);
+      color: var(--main-color);
+      transition: all .3s;
     } 
   }
 }

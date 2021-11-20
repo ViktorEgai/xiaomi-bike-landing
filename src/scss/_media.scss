@@ -219,7 +219,7 @@
       transform: rotate(-90deg);
     }
     &__title {
-      color: #fff;
+     
       max-width: 70%;
       margin-bottom: 30px;
     }
@@ -320,7 +320,10 @@
       margin-bottom: 80px;
     }
   }
-  .buy-card {
+  .tablet-hidden {
+    display: none;
+  }
+  .buy-card {    
     &__wrapper {        
       border-top-right-radius: 15px;   
       &::before {
@@ -330,21 +333,32 @@
     &__line {
       display: none;
     }
-    &__list {
-      display: none;
-      &-title {
-        display: none;
+    &__list-title{
+      position: relative;
+      width: fit-content;     
+      &--hidden {
+        display: block;
       }
     }
+    &__list-arrow {
+      width: 15px;
+      margin-left: 5px;
+      margin-bottom: -2px;
+      transition: all .2s;
+    }
     &__toggle {
-      margin-bottom: 150px;
+      margin-bottom: 100px;
     }
     &__image {
-      top: -42%;
+      top: -160px;
       right: -270px;
       max-height: 550px;
     }
+    &__btn {
+      margin-bottom: 30px;
+    }
   }
+ 
   .footer {
     padding: 40px 0;
     &__wrapper {
@@ -517,7 +531,7 @@
     }
     &__image {
       max-height: 460px;
-      top: -44%;
+      top: -130px;
       right: -235px;
     }
 
@@ -624,18 +638,51 @@
   .buy-card {
     &__wrapper {
       flex-direction: column;
-      padding: 20px;
+      padding: 30px;
     }
     &__image {
-      top:-360px;
-      left: 0;
-      max-width: 250px;
+      display: none;
+      position: static;
+      max-width: 100%;
     }
     &__toggle {
-      margin-bottom: 350px;
+      margin-bottom: 30px;
     }
     &__btn {
       min-width: 100%;
     }
+  }
+  .mobile-show {
+    display: block;
+  }
+}
+@media (max-width:440px) {
+  .main__wrapper {
+    padding-top: 280px;
+  }
+  .main__image {
+    left: -40px;
+    width: 710px;
+    height: 655px;
+  }
+  .design__cards {
+    &-item {
+      height: auto;
+      padding: 0;
+      color: var(--text-color);
+    }
+    &-image {
+      position: static;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .buy-card__toggle {
+    .toggle-btn__item {
+      padding: 10px 20px;
+    }
+    
   }
 }

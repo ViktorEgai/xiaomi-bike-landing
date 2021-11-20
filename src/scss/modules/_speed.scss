@@ -6,6 +6,7 @@
   background-position: top center;
   &__wrapper {
     position: relative;
+    color: $light;
      &:before {
        content: '';
        position: absolute;
