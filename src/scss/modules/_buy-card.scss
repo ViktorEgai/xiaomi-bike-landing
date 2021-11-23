@@ -46,14 +46,7 @@
   &__toggle {
     margin-bottom: 200px; 
   }
-  &__btn {
-    @include font(16px, 400, 150%, #fff);
-    border-radius: 65px;
-    min-width: 126px;
-    padding: 15px 35px;
-    background-color: $orange;
-    border: none;
-  }
+ 
   &__right-side {
     position: relative;
   }

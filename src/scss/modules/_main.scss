@@ -11,8 +11,8 @@
     height: 1271px;
     top: -610px;
     z-index: -1;
-    right: 0;
-    transform: translateX(42%)    
+    right: -600px;
+
   }
   &__title {
     @include font(80px, 600);

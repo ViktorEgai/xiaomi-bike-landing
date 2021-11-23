@@ -37,12 +37,8 @@
     &-item {
       max-width: 360px;
       opacity: 0.4;
-      &--active {
-        opacity: 1;
-        & .about-battery__descr-title::after {
-          background-color: $orange;
-        }
-      }
+      transition: all .3s;
+     
       &:last-child {
         & .about-battery__descr-title::after {
           width: 100%;
@@ -61,6 +57,7 @@
         bottom: -15px;
         left: 0;
         background-color: #fff;
+        transition: all .3s;
       }
       
     }

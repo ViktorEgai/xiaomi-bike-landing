@@ -26,7 +26,6 @@ const swiperReview = new Swiper('.review-swiper', {
   // Optional parameters 
   loop: true,
   speed: 800,
-  slidesPerView: 3,
   spaceBetween: 40,
   navigation: {
     nextEl: '.review-btns__btn--next',
@@ -36,6 +35,9 @@ const swiperReview = new Swiper('.review-swiper', {
     el: '.swiper-pagination-2',
   },
   breakpoints: {
+     992: {
+      slidesPerView: 3,      
+    },
     // when window width is >= 320px
     640: {
       slidesPerView: 2,
@@ -43,7 +45,6 @@ const swiperReview = new Swiper('.review-swiper', {
     // when window width is >= 480px
     320: {
       slidesPerView: 1,
-
     },
   }
 });
@@ -68,8 +69,10 @@ class ToggleColor {
     reviewSlides = document.querySelectorAll('.review__slide'),
     smartphone = document.querySelector('.mobile-app__photo'),
     buyCard = document.querySelector('.buy-card__wrapper'),
-    buyCardImage = document.querySelector('.buy-card__image'),
-    arrow = document.querySelector('.buy-card__list-arrow');
+    buyCardImage = document.querySelectorAll('.buy-card__image'),
+    arrow = document.querySelector('.buy-card__list-arrow'),
+    popupBlock = document.querySelectorAll('.popup__block'),
+    selectColor = document.getElementById('color');
     if(this.toggle) {
       document.documentElement.style.setProperty('--main-color', '#e0e0e0');
       document.documentElement.style.setProperty('--text-color', '#222222');
@@ -77,9 +80,10 @@ class ToggleColor {
       reviewSlides.forEach(i=>i.style.background = '#f1f1f1');
       smartphone.setAttribute('src','./img/smartphone-white.png');
       buyCard.classList.add('buy-card__wrapper--light');
-      buyCardImage.setAttribute('src',"img/clean-black-bike.png");
+      buyCardImage.forEach( i => i.setAttribute('src', 'img/clean-black-bike.png'));
       arrow.setAttribute('src',"img/arrow-black.svg");
-      
+      popupBlock.forEach( i => i.classList.add('popup__block--light'));
+      selectColor.value = 'black';
     } else {
       document.documentElement.style.setProperty('--main-color', '#222222');
       document.documentElement.style.setProperty('--text-color', '#f1f1f1');
@@ -87,9 +91,10 @@ class ToggleColor {
       reviewSlides.forEach( i => i.style.background = '#151515');
       smartphone.setAttribute('src','./img/smartphone-white.png');
       buyCard.classList.remove('buy-card__wrapper--light');
-      buyCardImage.setAttribute('src',"img/clean-white-bike.png");
+      buyCardImage.forEach( i => i.setAttribute('src', 'img/clean-white-bike.png'));
       arrow.setAttribute('src',"img/arrow-white.svg");
-         
+      popupBlock.forEach( i => i.classList.remove('popup__block--light'));
+      selectColor.value = 'white';
     }
   }
   toggleButtons() {
@@ -104,13 +109,16 @@ class ToggleColor {
       });
     });
   }
+  getStatus() {
+    return this.toggle;
+  }
   init() {
-    this.changeToggle();
-    
+    this.changeToggle();    
   }
 }
 const toggle = new ToggleColor();
 toggle.init();
+
 
 const showPack = () => {
   const title = document.querySelector('.buy-card__list-title');
@@ -129,3 +137,61 @@ const showPack = () => {
   })
 };
 showPack();
+
+const smoothScroll = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+};
+smoothScroll();
+
+const toggleBuyPopup = () => {
+  const popup = document.querySelectorAll('.popup'),
+    popupBuy = document.getElementById('popupBuy'),
+    popupReview = document.getElementById('popupReview'),
+    popupQuestion = document.getElementById('popupQuestion');
+   
+  document.addEventListener('click', (e) => { 
+    const target = e.target;
+    if (target.closest('.buy-card__btn')) {
+      popupBuy.classList.add('popup--visible');
+      popupBuy.querySelector('.popup__block').classList.add('popup__block--active');
+    } 
+    if (target.closest('.qna__btn')) {
+      popupQuestion.classList.add('popup--visible');
+      popupQuestion.querySelector('.popup__block').classList.add('popup__block--active');
+    } 
+    if (target.closest('.review__btn')) {
+      popupReview.classList.add('popup--visible');
+      popupReview.querySelector('.popup__block').classList.add('popup__block--active');
+    } 
+    if(target.closest('.close')) {
+      popup.forEach(item => {
+        item.classList.remove('popup--visible');
+        item.querySelector('.popup__block').classList.remove('popup__block--active');
+      });
+    }
+  });
+  
+};
+toggleBuyPopup();
+
+ AOS.init({
+   disable: 'phone'
+ });
+
+const toggleMenu = () => {
+  const menuBtn = document.querySelector('.menu-btn'),
+  navMenu = document.querySelector('.nav');
+  menuBtn.addEventListener('click', ()=> {
+    navMenu.classList.toggle('nav--active');
+    menuBtn.classList.toggle('menu-btn--active')
+  });
+};
+toggleMenu();

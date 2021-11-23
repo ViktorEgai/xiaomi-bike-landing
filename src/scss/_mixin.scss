@@ -10,7 +10,8 @@
   background-color: $light;
   border: none;
   border-radius: 65px;
-  transition: all 0.4s;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 @mixin font-face($name, $file, $weight: 400, $style: normal) {

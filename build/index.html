@@ -3,11 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width= , initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<title>Xiaomi</title>
-	</head>
 
+		<meta name="viewport" content="width= , initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<title>Xiaomi Mi Scooter Pro 2</title>
+	</head>
+</html>
 
 
 <body>
@@ -22,22 +25,22 @@
 			<nav class="header__nav nav">
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						<a href="" class="nav-list__link">О продукте</a>
+						<a href="#aboutBattery" class="nav-list__link">О продукте</a>
 					</li>
 					<li class="nav-list__item">
-						<a href="" class="nav-list__link">Внешний вид</a>
+						<a href="#design" class="nav-list__link">Внешний вид</a>
 					</li>
 					<li class="nav-list__item">
-						<a href="" class="nav-list__link">Безопасность</a>
+						<a href="#safety" class="nav-list__link">Безопасность</a>
 					</li>
 					<li class="nav-list__item">
-						<a href="" class="nav-list__link">Отзывы</a>
+						<a href="#reviews" class="nav-list__link">Отзывы</a>
 					</li>
 					<li class="nav-list__item">
-						<a href="" class="nav-list__link">FAQ</a>
+						<a href="#qna" class="nav-list__link">FAQ</a>
 					</li>
 				</ul>
-				<a class="header__btn btn" href="#">Купить</a>
+				<a class="header__btn btn" href="#buyCard">Купить</a>
 			</nav>
 			<button class="menu-btn"></button>
 		</div>
@@ -50,32 +53,33 @@
 	<section class="main">
 		<div class="container">
 			<div class="main__wrapper">
-				<h1 class="main__title">
+				<h1 class="main__title" data-aos="fade-right" data-aos-duration="2000">
 					Стильный электросамокат с&nbsp;мощным аккумулятором
 				</h1>
-				<p class="main__descr">
+				<p class="main__descr"data-aos="fade-right" data-aos-duration="2000">
 					Улучшенная производительность для дальних путешествий. Работает так же просто,
 					<br>как и выглядит.
 				</p>
-				<button class="main__btn toggle-btn" id="toggleBtn">
+				<button class="main__btn toggle-btn"data-aos="fade-right" data-aos-duration="2000">
 					<span class="toggle-btn__item toggle-btn__item--active">Белый</span>
 					<span class="toggle-btn__item">Черный</span>
 				</button>
-				<img class="main__image" src="./img/white-bike.png" alt="Xiaomi bike" id="bike">
+				<img class="main__image" src="./img/white-bike.png" alt="Xiaomi bike" id="bike" 
+				data-aos="fade-left"  data-aos-duration="3000">
 			</div>
 			<!-- /.main__wrapper -->
 
 		</div>
 		<!-- /.container -->
 	</section>
-	<section class="about-battery">
+	<section class="about-battery" id="aboutBattery">
 		<div class="container">
 			<div class="about-battery__wrapper">
-				<h2 class="about-battery__title">
+				<h2 class="about-battery__title" data-aos="fade-down" data-aos-duration="2000" >
 					Мощная батарея и экономичный расход заряда позволяют преодолевать расстояния до 45 км
 				</h2>
 				<div class="about-battery__descr">
-					<div class="about-battery__descr-item about-battery__descr-item--active">
+					<div class="about-battery__descr-item" data-aos="flip-right" data-aos-duration="2000"  data-aos-delay="0">
 						<h3 class="about-battery__descr-title">Три режима скорости</h3>
 						<p class="about-battery__descr-text">
 							Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость,
@@ -85,7 +89,7 @@
 						<img class="about-battery__descr-image" src="img/about-battery-1.png" alt="Xiaomi">
 					</div>
 					<!-- /.about-battery__descr-item -->
-					<div class="about-battery__descr-item ">
+					<div class="about-battery__descr-item " data-aos="flip-right"  data-aos-duration="2000" data-aos-delay="500">
 						<h3 class="about-battery__descr-title">Система восстановления энергии</h3>
 						<p class="about-battery__descr-text">
 							Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую,
@@ -94,7 +98,7 @@
 						<img class="about-battery__descr-image" src="img/about-battery-3.png" alt="Xiaomi">
 					</div>
 					<!-- /.about-battery__descr-item -->
-					<div class="about-battery__descr-item">
+					<div class="about-battery__descr-item" data-aos="flip-right"  data-aos-duration="2000"  data-aos-delay="1000">
 						<h3 class="about-battery__descr-title">Мощная батарея</h3>
 						<p class="about-battery__descr-text">
 							Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без
@@ -105,9 +109,9 @@
 					<!-- /.about-battery__descr-item -->
 				</div>
 				<!-- /.about-battery__descr -->
-				<div class="about-battery__photos">
-					<img class="about-battery__photos-item " src="img/about-battery-1.png" alt="Мощная батарея">
-					<img class="about-battery__photos-item" src="img/about-battery-2.png" alt="Мощная батарея">
+				<div class="about-battery__photos" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1500">
+					<img class="about-battery__photos-item " src="img/about-battery-1.png" alt="Мощная батарея" >
+					<img class="about-battery__photos-item" src="img/about-battery-2.png" alt="Мощная батарея" >
 				</div>
 				<!-- /.about-battery__photos -->
 			</div>
@@ -120,21 +124,23 @@
 	</section>
 	<section class="speed">
 		<div class="container">
-			<div class="speed__wrapper">
+			<div class="speed__wrapper" data-aos="fade-right" data-aos-duration="2000">
 				<a href="#" class="speed__logo">
 					<svg class="speed__logo-icon logo-icon">
 						<use href="img/sprite.svg#sprite--logo"></use>
 					</svg>
 				</a>
-				<h2 class="speed__title">Высокая скорость передвижения</h2>
+				<h2 class="speed__title" >Высокая скорость передвижения</h2>
 				<p class="speed__text">Двигатель мощностью до 600 Вт позволяет развивать скорость до 25 км/ч.
 				</p>
+				
 			</div>
 			<!-- /.speed__wrapper -->
 		</div>
 		<!-- /.container -->
+		<!-- <img class="speed__image" src="img/2-people.png" alt="Speed Quality"> -->
 	</section>
-	<section class="design">
+	<section class="design" id="design">
 		<div class="container">
 			<svg class=" design__line-top">
 				<use href="img/sprite.svg#sprite--line-2"></use>
@@ -143,11 +149,11 @@
 				<use href="img/sprite.svg#sprite--line-3"></use>
 			</svg>
 			<div class="design__wrapper">
-				<h2 class="design__title">
+				<h2 class="design__title" data-aos="fade-down" data-aos-duration="2000"  >
 					Лаконичный современный дизайн, в&nbsp;котором нет ничего лишнего
 				</h2>
 				<div class="design__cards">
-					<div class="design__cards-item">
+					<div class="design__cards-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500" >
 						<img class="design__cards-image" src="img/design-1.png" alt="xiaomi">
 						<h4 class="design__cards-title">
 							Минималистичный дизайн
@@ -158,7 +164,7 @@
 						</p>
 					</div>
 					<!-- /.design__card -->
-					<div class="design__cards-item">
+					<div class="design__cards-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500" >
 						<img class="design__cards-image" src="img/design-2.png" alt="xiaomi">
 						<h4 class="design__cards-title">
 							Удобная панель управления
@@ -176,14 +182,14 @@
 		</div>
 		<!-- /.container -->
 	</section>
-	<section class="safety">
+	<section class="safety" id="safety">
 		<div class="container">
 			<div class="safety__wrapper">
-				<h2 class="safety__title">
+				<h2 class="safety__title" data-aos="fade-down" data-aos-duration="2000" >
 					Заботится о вашей безопасности
 				</h2>
 				<div class="safety__info">
-					<div class="safety__info-item safety__info-item--active">
+					<div class="safety__info-item" data-aos="flip-right"  data-aos-duration="2000"  >
 						<h3 class="safety__info-title">Яркие ходовые огни</h3>
 						<p class="safety__info-text">
 							Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников
@@ -191,13 +197,13 @@
 						</p>
 						<img class="safety__info-image" src="img/safety-1.png" alt="Xiaomi" >
 					</div>
-					<div class="safety__info-item ">
+					<div class="safety__info-item" data-aos="flip-right"  data-aos-duration="2000"  data-aos-delay="500">
 						<h3 class="safety__info-title">Двойная тормозная система</h3>
 						<p class="safety__info-text">При нажатии наручку тормоза системы переднего и заднего колеса активируются
 							последовательно, сокращая тормозной путь и обеспечивая безопасную и плавную остановку.</p>
 							<img class="safety__info-image" src="img/safety-3.png" alt="Xiaomi" >
 					</div>
-					<div class="safety__info-item">
+					<div class="safety__info-item" data-aos="flip-right"  data-aos-duration="2000"  data-aos-delay="1000">
 						<h3 class="safety__info-title">Яркая задняя фара</h3>
 						<p class="safety__info-text">
 							При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она
@@ -205,7 +211,7 @@
 						</p>
 						<img class="safety__info-image" src="img/safety-4.png" alt="Xiaomi" >
 					</div>
-					<div class="safety__info-item">
+					<div class="safety__info-item" data-aos="flip-right"  data-aos-duration="2000"  data-aos-delay="1500">
 						<h3 class="safety__info-title">Отражатели спереди, сбоку и сзади</h3>
 						<p class="safety__info-text">
 							Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в
@@ -215,7 +221,7 @@
 					</div>
 				</div>
 				<!-- /.safety__info -->
-				<div class="safety__photos">
+				<div class="safety__photos" data-aos="fade-down"  data-aos-duration="2000"  data-aos-delay="2000">
 					<img class="safety__photos-item" src="img/safety-1.png" alt="">
 					<img class="safety__photos-item" src="img/safety-2.png" alt="">
 				</div>
@@ -228,7 +234,7 @@
 	<section class="mobile-app">
 		<div class="container">
 			<div class="mobile-app__wrapper">
-				<div class="mobile-app__descr">
+				<div class="mobile-app__descr" data-aos="fade-right"  data-aos-duration="2000"  >
 					<h2 class="mobile-app__title">Мобильное приложение Mi&nbsp;Home</h2>
 					<p class="mobile-app__text">
 						Подключите самокат к мобильному приложению Mi Home и используйте его для блокировки и разблокировки
@@ -244,8 +250,8 @@
 					</div>
 				</div>
 				<!-- /.mobile-app__descr -->
-				<div class="mobile-app__right-side">
-					<img class="mobile-app__photo" src="img/smartphone.png" alt="Mi Home">
+				<div class="mobile-app__right-side" >
+					<img class="mobile-app__photo" src="img/smartphone.png" alt="Mi Home" data-aos="fade-up"  data-aos-duration="2000"  data-aos-delay="1000">
 					<svg class="mobile-app__line">
 						<use href="img/sprite.svg#sprite--line-4"></use>
 					</svg>
@@ -286,10 +292,10 @@
 					<img class="brand-swiper__slide-item" src="img/brand-slide01.jpg" alt="">
 				</div>
 				<div class="swiper-slide brand-swiper__slide">
-					<img class="brand-swiper__slide-item" src="img/brand-slide01.jpg" alt="">
+					<img class="brand-swiper__slide-item" src="img/brand-slide02.jpg" alt="">
 				</div>
 				<div class="swiper-slide brand-swiper__slide">
-					<img class="brand-swiper__slide-item" src="img/brand-slide01.jpg" alt="">
+					<img class="brand-swiper__slide-item" src="img/brand-slide03.jpg" alt="">
 				</div>
 
 
@@ -298,12 +304,12 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</section>
-	<section class="review">
+	<section class="review" id="reviews">
 		<div class="container">
 			<div class="review__wrapper">
-				<h2 class="review__title">Отзывы о Mi Scooter Pro&nbsp;2</h2>
+				<h2 class="review__title" data-aos="fade-down" data-aos-duration="2000">Отзывы о Mi Scooter Pro&nbsp;2</h2>
 				<!-- Slider main container -->
-				<div class="swiper review-swiper">
+				<div class="swiper review-swiper" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500">
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
 						<!-- Slides -->
@@ -380,10 +386,10 @@
 		</div>
 		<!-- /.container -->
 	</section>
-	<section class="qna">
+	<section class="qna" id="qna">
 		<div class="container">
 			<div class="qna__wrapper">
-				<div class="qna__descr">
+				<div class="qna__descr" data-aos="fade-right" data-aos-duration="2000">
 					<h2 class="qna__title">Часто задаваемые вопросы</h2>
 					<p class="qna__subtitle">
 						Все ваши часто задаваемые вопросыо электросамокате Mi Scooter Pro 2.
@@ -395,7 +401,7 @@
 					</button>
 				</div>
 				<!-- /.qna__descr -->
-				<div class="qna__text">
+				<div class="qna__text" data-aos="fade-left" data-aos-duration="2000">
 					<h3 class="qna__question">
 						На него нужны права категории M?
 					</h3>
@@ -429,20 +435,20 @@
 		</div>
 		<!-- /.container -->
 	</section>
-	<section class="buy-card">
+	<section class="buy-card" id="buyCard">
 		<div class="container">
-			<div class="buy-card__wrapper">
-				<div class="buy-card__left-side">
+			<div class="buy-card__wrapper" >
+				<div class="buy-card__left-side" data-aos="zoom-in" data-aos-duration="2000">
 					<h2 class="buy-card__title">
 						Mi Electric Scooter Pro&nbsp;2
 					</h2>
 					<p class="buy-card__price">54 990 ₽</p>
-					<button class="buy-card__toggle toggle-btn" id="toggleBtn">
+					<button class="buy-card__toggle toggle-btn">
 						<span class="toggle-btn__item toggle-btn__item--active">Белый</span>
 						<span class="toggle-btn__item">Черный</span>
 					</button>
 					<img class="buy-card__image mobile-show" src="img/clean-white-bike.png" alt="Mi Electric Scooter Pro 2">
-					<button class="buy-card__btn">Купить</button>
+					<button class="buy-card__btn btn-2">Купить</button>
 					<p class="buy-card__list-title  buy-card__list-title--hidden">
 						Комплект поставки
 						<img class="buy-card__list-arrow" src="img/arrow-white.svg" alt="arrow">
@@ -458,7 +464,7 @@
 					</ul>
 				</div>
 				<!-- /.buy-card__left-side -->
-				<div class="buy-card__right-side">
+				<div class="buy-card__right-side" data-aos="zoom-in" data-aos-duration="2000">
 					<p class="buy-card__list-title tablet-hidden">
 						Комплект поставки
 					</p>
@@ -482,6 +488,84 @@
 		</div>
 		<!-- /.container -->
 	</section>
+	<div class="popup" id="popupReview">
+		<div class="popup__inner">
+			<div class="popup__block">
+				<svg class="popup__close close">
+					<use href="img/sprite.svg#sprite--close"></use>
+				</svg>
+				<h2 class="popup__title">Оставьте свой отзыв</h2>
+			<form class="popup__form form">
+				<div class="form__item">
+					<label for="reviewName" class="form__label">Ваш имя *</label>
+				<input type="text" class="form__input " id="reviewName">
+				</div>
+				<div class="form__item">
+					<label for="review" class="form__label">Ваш Отзыв *</label>
+				<textarea class="form__input form__textarea" id="review"></textarea>
+				</div>
+				<!-- /.form__item -->			
+				<button class="form__btn btn-2">Отправить</button>
+			</form>
+			</div>
+		</div>
+		<!-- /.popup-buy__inner -->
+	</div>
+	<div class="popup" id="popupQuestion">
+		<div class="popup__inner">
+			<div class="popup__block">
+				<svg class="popup__close close">
+					<use href="img/sprite.svg#sprite--close"></use>
+				</svg>
+				<h2 class="popup__title">Задать вопрос</h2>
+			<form class="popup__form form">
+				<div class="form__item">
+					<label for="question" class="form__label">Ваш Вопрос *</label>
+				<textarea class="form__input form__textarea" id="question"></textarea>
+				</div>
+				<!-- /.form__item -->			
+				<button class="form__btn btn-2">Отправить</button>
+			</form>
+			</div>
+		</div>
+		<!-- /.popup-buy__inner -->
+	</div>
+
+	<div class="popup" id="popupBuy">
+		<div class="popup__inner">
+			<div class="popup__block">
+				<svg class="popup__close close">
+					<use href="img/sprite.svg#sprite--close"></use>
+				</svg>
+				<h2 class="popup__title">Оставить заявку</h2>
+			<form class="popup__form form">
+				<div class="form__item">
+					<label for="name" class="form__label">Ваше имя *</label>
+				<input type="text" class="form__input" id="name">
+				</div>
+				<!-- /.form__item -->
+				<div class="form__item">
+					<label for="phone" class="form__label">Номер телефона *</label>
+				<input type="tel" class="form__input" id="phone">
+				</div>
+				<!-- /.form__item -->
+				<div class="form__item">
+						<label for="color" class="form__label">Цвет</label>
+				<select class="form__input" id="color">
+					<option value="white">Белый</option>
+					<option value="black">Черный</option>
+				</select>
+				</div>
+				<!-- /.form__item -->
+				
+			
+				<button class="form__btn btn-2">Отправить</button>
+			</form>
+			</div>
+		</div>
+		<!-- /.popup-buy__inner -->
+	</div>
+	<!-- /.popup-buy -->
 	<footer class="footer">
 	<div class="container">
 		<div class="footer__wrapper">

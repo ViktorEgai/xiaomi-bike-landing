@@ -1,3 +1,32 @@
+@media (min-width:992px) {
+  .safety__info-item:hover {
+    opacity: 1;
+    .safety__info-title:after {
+      background-color: $orange;
+    }
+  }
+  .about-battery__descr-item:hover {
+    opacity: 1;
+    .about-battery__descr-title::after {
+      background-color: $orange;
+    }
+  }
+  .nav-list__link:hover {
+    color: $orange;
+  }
+  .header__btn:hover, 
+  .review__btn:hover,
+  .qna__btn:hover {
+    background-color: $orange;
+    color: $light;
+  }
+  .btn-2:hover {
+    background-color: $light;
+    color: $dark;
+    border: 1px solid var(--text-color);
+  }
+ 
+}
 @media (max-width:1440px) {
   .about-battery__line {
     left: 15.7%;
@@ -145,16 +174,54 @@
   }
   .menu-btn {
     display: block;
+    position: relative;
+    z-index: 1000;
   }
+
   .nav {
-    display: none;
+    &--active {
+       transform: translateY(0);
+
+    }    
+    transform: translateY(-550%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--main-color);
+    padding: 100px 50px 50px;
+    transition: all 0.3s;
+    min-height: 450px;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+   justify-content: space-between;
+   overflow: auto;
+    &-list {
+      flex-direction: column;
+      margin-right: 0;
+      align-items: center;
+     &__item {
+        font-size: 18px;
+        margin-bottom: 30px;
+     }
+      &__item:not(:last-child) {
+        margin-right: 0;
+       
+      }
+    }
+  }
+  .header__btn {
+    align-self: center;
+    
   }
   .header__logo {
     margin-right: auto;
   }
   .main {
     &__image {
-      right: -150px;
+      right: -630px;
     }
     &__descr {
       font-size: 24px;
@@ -374,6 +441,7 @@
   }
 }
 @media (max-width: 768px) {
+ 
   .container {
     max-width: 90%;
   }
@@ -387,7 +455,7 @@
     max-width: 70%;         
     }
     &__image {
-      right: -100px;
+      right: -360px;
       top: -310px;
       width: 810px;
       height: 710px;
@@ -654,6 +722,19 @@
   }
   .mobile-show {
     display: block;
+  }
+  .popup__title {
+    font-size: 24px;
+  }
+  .form {
+    min-width: 100%;
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;      
+    }
+    &__input {
+      width: 100%;
+    }
   }
 }
 @media (max-width:440px) {

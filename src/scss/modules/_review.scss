@@ -25,13 +25,12 @@
   }
 
   &-swiper {
-    margin-right: -23%;
     margin-bottom: 40px;
     position: relative;    
   }
 
   &__slide {
-    max-width: 460px;
+    
     padding: 40px;
     background: #151515;
     border-radius: 15px;
@@ -78,6 +77,7 @@
       background-color: #f1f1f1;
       border: none;
       transition: all 0.4s;
+      cursor: pointer;
       &:hover {
         background-color: $orange;
       }

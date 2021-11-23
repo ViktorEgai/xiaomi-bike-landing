@@ -7,15 +7,11 @@
   &__info {
      display: flex;        
      margin-bottom: 30px;
+     
      &-item {
-       max-width: 300px;
-       opacity: 0.4;      
-       &--active {
-         opacity: 1;
-         & .safety__info-title::after {
-           background-color: $orange;
-         }
-       }
+       max-width: 300px;             
+      opacity: 0.3;
+      transition: all .5s;
       &:not(:last-child) {
         padding-right: 40px;
       }
@@ -28,7 +24,7 @@
          padding-right: 30%;        
        }
      }
-     &-title {
+     &-title {       
        @include font(20px, 600, 120%);
        margin-bottom: 30px;
        position: relative;
@@ -38,8 +34,9 @@
          width: 115%;
          height: 3px;
          bottom: -15px;
-         left: 0;
-         background-color: #fff;
+         left: 0;         
+         transition: all .3s;
+         background-color: $orange;
        }       
      }
 
@@ -91,3 +88,5 @@
     }
   }
 }
+
+

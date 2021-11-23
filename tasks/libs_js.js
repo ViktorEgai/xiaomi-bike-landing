@@ -1,5 +1,8 @@
 const plugins = [
-	'node_modules/swiper/swiper-bundle.min.js'
+	'node_modules/swiper/swiper-bundle.min.js',
+	'node_modules/aos/dist/aos.js',
+	'node_modules/simple-parallax-js/dist/simpleParallax.min.js'
+
 ];
 const {
 	src,

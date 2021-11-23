@@ -41,7 +41,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+input, select,button  {
+  outline: none;
+}
 .logo-icon {
   width: 60px;
   height: 39px;
@@ -51,4 +53,19 @@ a {
 }
 .mobile-show {
   display: none;
+}
+
+.btn-2 {
+  @include font(16px, 400, 150%, #fff);
+  border-radius: 65px;
+  min-width: 126px;
+  padding: 15px 35px;
+  background-color: $orange;
+  border: none;
+  transition: all .3s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.close {
+  fill: var(--text-color);
 }
